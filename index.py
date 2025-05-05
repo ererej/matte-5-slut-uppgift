@@ -281,7 +281,6 @@ class TestScene(ThreeDScene):
         semi_circle.shift(DOWN * 4)  # Move it up to match the cone's position
 
         self.play(semi_circle.animate.shift(UP * 3), cone.animate.shift(UP * 2), run_time=2)
-        self.play(cone.animate.shift(UP * 2))
 
         self.wait(1)
 
@@ -317,7 +316,7 @@ class TestScene(ThreeDScene):
             )
             new_cone.move_to(mob.get_center())
             mob.become(new_cone)
-            mob.shift(DOWN * 2)  # Ensure it keeps its position
+            # mob.shift(DOWN * 2)  # Ensure it keeps its position
 
         self.play(UpdateFromAlphaFunc(semi_circle, update_angle_semi_circle), UpdateFromAlphaFunc(cone, update_angle_cone), run_time=2)
         self.wait(0.5)
@@ -351,7 +350,7 @@ class TestScene(ThreeDScene):
             )
             new_cone.move_to(mob.get_center())
             mob.become(new_cone)
-            mob.shift(DOWN * 2)  # Ensure it keeps its position
+            # mob.shift(DOWN * 2)  # Ensure it keeps its position
 
 
 
